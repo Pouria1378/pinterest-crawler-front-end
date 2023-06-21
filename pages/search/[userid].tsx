@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/layout";
+import UserID from "@/components/userid/userid";
 import { GetServerSideProps, NextPage } from "next";
 import { useRouter } from "next/router";
 
@@ -8,12 +9,12 @@ type Props = {
   };
 };
 
-const UserID: NextPage<Props> = ({ data }) => {
+const UserIDPage: NextPage<Props> = ({ data }) => {
   const router = useRouter();
 
   return (
     <Layout>
-      <h1>{router.query.userid}</h1>
+      <UserID />
     </Layout>
   );
 };
@@ -31,4 +32,4 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   };
 };
 
-export default UserID;
+export default UserIDPage;
