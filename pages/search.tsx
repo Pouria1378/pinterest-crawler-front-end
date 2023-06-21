@@ -1,5 +1,5 @@
-import Layout from "@/src/components/layout/layout";
-import Search from "@/src/components/search/search";
+import Layout from "@/components/layout/layout";
+import Search from "@/components/search/search";
 
 export default function Home() {
   return (

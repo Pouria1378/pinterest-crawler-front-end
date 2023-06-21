@@ -4,8 +4,9 @@ interface InputProps {
   label?: string;
   name: string;
   type?: "text" | "password" | "email" | "number";
-  defaultValue: string | number;
+  defaultValue?: string | number;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -14,6 +15,7 @@ const Input: React.FC<InputProps> = ({
   type = "text",
   defaultValue,
   onChange,
+  placeholder,
 }) => {
   return (
     <div className="mb-1">
@@ -25,6 +27,7 @@ const Input: React.FC<InputProps> = ({
       <input
         type={type}
         name={name}
+        placeholder={placeholder}
         defaultValue={defaultValue}
         onChange={onChange}
         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
