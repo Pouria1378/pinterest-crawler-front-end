@@ -10,7 +10,16 @@ export default function Search() {
         src={"/pinterestLogo.png"}
         alt="pinterestLogo"
       />
-      <Input />
+      <Input
+        name="test"
+        defaultValue={1}
+        onChange={(e) => {
+          console.log("====================================");
+          console.log(e.target.value);
+          console.log("====================================");
+          return e.target.value;
+        }}
+      />
       <p>Search</p>
     </div>
   );
