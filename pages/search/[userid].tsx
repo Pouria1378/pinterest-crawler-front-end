@@ -1,33 +1,40 @@
 import Layout from "@/components/layout/layout";
 import UserID from "@/components/userid/userid";
 import { GetServerSideProps, NextPage } from "next";
-import { useRouter } from "next/router";
 
 type Props = {
-  data: {
-    message: string;
-  };
+  data: Array<string>;
 };
 
 const UserIDPage: NextPage<Props> = ({ data }) => {
-  const router = useRouter();
-
+  console.log("====================================");
+  console.log("data", data);
+  console.log("====================================");
   return (
     <Layout>
-      <UserID />
+      <UserID data ={data}/>
     </Layout>
   );
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  // const res = await fetch("https://example.com/api/data");
-  // const data = await res.json();
+export const getServerSideProps: GetServerSideProps = async (req) => {
+  const postdata = {
+    userID: req.query.userid,
+  };
+  const res = await fetch("http://127.0.0.1:8000", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(postdata),
+  });
+  const data = await res.json();
+
+  // console.log("data", data);
 
   return {
     props: {
-      data: {
-        message: "",
-      },
+      data: data.imagesLinks || [],
     },
   };
 };

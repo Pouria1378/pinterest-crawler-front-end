@@ -1,14 +1,20 @@
 import { useState } from "react";
 import Button from "../button/button";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
-export default function UserID() {
+type props = {
+  data: Array<string>;
+};
+
+export default function UserID(props: props) {
+  const { data } = props;
   const router = useRouter();
 
   return (
     <section>
       <div className="flex items-center justify-between">
-        <h1>{router.query.userid}</h1>
+        <h1>userid: {router.query.userid}</h1>
         <Button
           className=""
           onClick={() => {
@@ -21,7 +27,18 @@ export default function UserID() {
           Try again?{" "}
         </Button>
       </div>
-      <div>{}</div>
+      <div className="flex flex-row flex-wrap">
+        {data.map((img, index) => (
+          <Image
+            className="m-4"
+            key={index}
+            width={200}
+            height={200}
+            src={img}
+            alt=""
+          />
+        ))}
+      </div>
     </section>
   );
 }
