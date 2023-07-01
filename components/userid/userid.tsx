@@ -12,7 +12,7 @@ export default function UserID(props: props) {
   const router = useRouter();
 
   return (
-    <section>
+    <section className="m-6 p-6 min-w-full">
       <div className="flex items-center justify-between">
         <h1>userid: {router.query.userid}</h1>
         <Button
@@ -27,10 +27,10 @@ export default function UserID(props: props) {
           Try again?{" "}
         </Button>
       </div>
-      <div className="flex flex-row flex-wrap">
+      <div className="flex flex-row flex-wrap mt-40">
         {data.map((img, index) => (
           <Image
-            className="m-4"
+            className="m-4 p-4 hover:scale-105"
             key={index}
             width={200}
             height={200}
