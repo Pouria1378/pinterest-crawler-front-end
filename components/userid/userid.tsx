@@ -12,9 +12,12 @@ export default function UserID(props: props) {
   const router = useRouter();
 
   return (
-    <section className="m-6 p-6 min-w-full">
-      <div className="flex items-center justify-between">
-        <h1>userid: {router.query.userid}</h1>
+    <section className="m-6 p-6">
+      <div className="flex items-center justify-between m-4">
+        <h1>
+          <span className="text-white">userid: </span>
+          <span className="font-bold">{router.query.userid}</span>
+        </h1>
         <Button
           className=""
           onClick={() => {
@@ -27,10 +30,10 @@ export default function UserID(props: props) {
           Try again?{" "}
         </Button>
       </div>
-      <div className="flex flex-row flex-wrap mt-40">
+      <div className="flex flex-row flex-wrap mt-12">
         {data.map((img, index) => (
           <Image
-            className="m-4 p-4 hover:scale-105"
+            className="m-4 hover:scale-105"
             key={index}
             width={200}
             height={200}

@@ -7,7 +7,7 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className="flex items-center justify-center h-full">
+    <div className="flex h-full">
       <Head>
         <title>Pinterest Crawler</title>
       </Head>

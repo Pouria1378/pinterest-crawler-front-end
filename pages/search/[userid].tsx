@@ -12,7 +12,7 @@ const UserIDPage: NextPage<Props> = ({ data }) => {
   console.log("====================================");
   return (
     <Layout>
-      <UserID data ={data}/>
+      <UserID data={data} />
     </Layout>
   );
 };
