@@ -12,7 +12,7 @@ export default function UserID(props: props) {
   const router = useRouter();
 
   return (
-    <section className="m-6 p-6">
+    <section className="m-6 p-6 flex justify-center items-center">
       <div className="flex items-center justify-between m-4">
         <h1>
           <span className="text-white">userid: </span>

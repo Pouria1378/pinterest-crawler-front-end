@@ -556,6 +556,10 @@ video {
   margin: 1.5rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -634,6 +638,10 @@ video {
 
 .max-w-\[30ch\] {
   max-width: 30ch;
+}
+
+.max-w-xs {
+  max-width: 20rem;
 }
 
 .appearance-none {

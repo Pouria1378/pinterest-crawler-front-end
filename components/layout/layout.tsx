@@ -12,7 +12,7 @@ const Layout = ({ children }: Props) => {
         <title>Pinterest Crawler</title>
       </Head>
       {/* <header>Header goes here</header> */}
-      <main>{children}</main>
+      <main className="w-full h-full">{children}</main>
       {/* <footer>Footer goes here</footer> */}
     </div>
   );

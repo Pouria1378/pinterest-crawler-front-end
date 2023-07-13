@@ -9,7 +9,7 @@ export default function Search() {
   const [userID, setUserID] = useState("");
 
   return (
-    <div className="p-6 rounded-md overflow-hidden bg-white shadow-xl">
+    <div className="p-6 rounded-md overflow-hidden bg-white shadow-xl m-auto mt-20 max-w-xs">
       <Image
         width={200}
         height={200}
